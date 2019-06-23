@@ -15,25 +15,9 @@ module Enjoeat
 end
 World Enjoeat
 
-Dado("que hoje é segunda-feira") do
-    @hoje = 'segunda-feira'
-end
-
-Dado("que hoje é terça-feira") do
-    @hoje = 'terça-feira'
-end
-
-Dado("que hoje é quarta-feira") do
-    @hoje = 'quarta-feira'
-end
-  
-Dado("que hoje é quinta-feira") do
-    @hoje = 'quinta-feira'
-end
-  
-Dado("que hoje é sexta-feira") do
-    @hoje = 'sexta-feira'
- end
+Dado("que hoje é {string}") do |dia|
+    @hoje = dia
+  end
 
 Quando("eu pergunto qual é o prato do dia") do
     @resposta_obtida = prato_do_dia(@hoje)

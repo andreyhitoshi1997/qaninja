@@ -10,6 +10,12 @@ module Enjoeat
             'Pizza'
         elsif dia == 'sexta-feira'
             'Open Bar'
+        elsif dia == 'sábado'
+            'Veja o Cardápio'
+        elsif dia == 'domingo'
+            'Fechado'
+        else 
+            'Dia Inválido'
         end
     end
 end
@@ -22,7 +28,7 @@ Dado("que hoje é {string}") do |dia|
 Quando("eu pergunto qual é o prato do dia") do
     @resposta_obtida = prato_do_dia(@hoje)
 end
-  
-Então("a reposta deve ser {string}") do |resposta_esperada|
+
+Então("a resposta deve ser {string}") do |resposta_esperada|
     expect(@resposta_obtida).to eql resposta_esperada
 end

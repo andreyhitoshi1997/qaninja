@@ -5,25 +5,16 @@ Funcionalidade: Restaurantes
     Sendo um usuário que deseja pedir comida
     Posso acessar a lista de restaurantes
 
-    Contexto: Lista de restaurantes
-        Dado que tenho uma lista de restaurantes
+    @temp
+    Esquema do Cenário: Restaurantes Disponíveis
 
-    Cenario: Todos os restaurantes
-        Dado que tenho uma lista de restaurantes
-        Quando acesso a lista de restaurantes
-        Então vejo todas as opções disponíveis
-   
-    Cenario: Categorias
-        Dado que tenho uma lista de restaurantes
-        Quando acesso a lista de restaurantes
-        Então cada restaurante deve exibir sua categoria
-    
-    Cenario: Tempo de entrega
-        Dado que tenho uma lista de restaurantes
-        Quando acesso a lista de restaurantes
-        Então cada restaurante deve exibir o tempo de entrega
+    Cenário: Restaurantes Diponíveis
 
-    Cenario: Nota de avaliação
-        Dado que tenho uma lista de restaurantes
+        Dado que temos os seguintes Restaurantes
+        | id | nome             | categoria     | entrega      | avaliacao |
+        | 0  | Bread & Bakery   | Padaria       |25 minutos    | 4.9       |
+        | 1  | Burger House     | Hamburgers    | 30 minutos   | 3.5       |
+
         Quando acesso a lista de restaurantes
-        Então cada restaurante deve exibir sua nota de avaliação
+        Então devo ver todos os restaurantes desta lista
+
